@@ -1,26 +1,16 @@
-// Anuncio
-.an {
-  width: 728px;
-  height: 90px;
-  margin: 0 auto;
-  display: block;
-  margin-bottom: 10px;
-}
-
 // Header
 .header-container {
   padding: 2rem;
-  @include center;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid $detail;
+  border-bottom: 1px solid var(--colorDetail);
 }
 .logo {
   width: 200px;
-  transition: all 0.3s;
+  transition: var(--transition-normal);
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
   }
 }
 .logo img {
@@ -36,7 +26,7 @@
     display: block;
     width: 100%;
     height: 3px;
-    background-color: $light;
+    background-color: var(--colorLight);
     margin-top: 6px;
     transform-origin: 0px 100%;
     transition: all 300ms;
@@ -63,12 +53,10 @@
     text-transform: uppercase;
     font-weight: 600;
     display: inline-block;
-    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    font-family: $fontTexto;
     &::after {
       content: "";
       display: block;
-      background: $detail;
+      background: var(--colorDetail);
       width: 100%;
       margin-top: 4px;
       height: 1.3px;
@@ -86,9 +74,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid $detail;
+  border-top: 1px solid var(--colorDetail);
   padding: 4rem 2rem;
-  @include center;
   width: 100%;
   &__nav {
     display: flex;
@@ -97,15 +84,13 @@
     &-link {
       text-transform: uppercase;
       font-weight: 600;
-      font-family: $fontTexto;
       padding: 0 15px;
       display: inline-block;
       --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-      font-family: $fontTexto;
       &::after {
         content: "";
         display: block;
-        background: $detail;
+        background: var(--colorDetail);
         width: 100%;
         margin-top: 4px;
         height: 1.3px;
@@ -131,31 +116,6 @@
     }
   }
   &__copy {
-    color: $light;
-    font-family: $fontTexto;
-  }
-}
-
-.link-presentacion {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: $fontTexto;
-  padding: 0 15px;
-  cursor: pointer;
-  display: inline-block;
-  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  font-family: $fontTexto;
-  &::after {
-    content: "";
-    display: block;
-    background: $detail;
-    width: 100%;
-    margin-top: 4px;
-    height: 1.3px;
-    clip-path: var(--clippy);
-    transition: clip-path 0.3s;
-  }
-  &:hover {
-    --clippy: polygon(0 0, 100% 0, 100% 99%, 0 100%);
+    font-size: 0.9rem;
   }
 }

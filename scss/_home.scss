@@ -4,39 +4,27 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   @include center;
-  padding: 8rem 2rem;
+  padding: 6rem 2rem;
 
   &__texto {
-    padding-left: 8rem;
-    h1 {
-      font-size: 3.5rem;
-      font-family: $fontTitulos;
-      line-height: 50px;
-
-      span {
-        color: $detail;
-      }
+    justify-self: center;
+    span {
+      color: var(--colorDetail);
     }
     h2 {
-      font-size: 1.8rem;
-      font-family: $fontTitulos;
       padding-left: 4px;
       color: #db0200;
-      line-height: 50px;
     }
     p {
-      font-size: 1.1rem;
       padding-left: 4px;
-      font-family: $fontTexto;
     }
     a {
       i {
-        font-size: 3rem;
-        transition: all 0.2s;
+        font-size: 2.4rem;
+        transition: var(--transition-normal);
         cursor: pointer;
         margin-top: 0.6rem;
         padding-left: 4px;
-
         &:hover {
           transform: scale(1.1);
         }
@@ -46,29 +34,21 @@
   &__imagen {
     img {
       width: 100%;
-      border: 1px solid $detail;
+      border: 1px solid var(--colorDetail);
     }
   }
 }
 
 // SECCIÓN WORK
-
 .work {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 6rem 1.5rem;
+  padding: 2rem 1.5rem 6rem 1.5rem;
   @include center;
 
-  &__titulo {
-    h1 {
-      font-size: 3.2rem;
-      color: $light;
-      font-family: $fontTitulos;
-    }
-  }
   .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -83,14 +63,14 @@
       justify-content: center;
       padding: 1.4rem;
       background: transparent;
-      border: 1px solid $detail;
+      border: 1px solid var(--colorDetail);
       gap: 1rem;
       max-width: 400px;
 
       &__img {
         img {
           width: 100%;
-          border: 1px solid $detail;
+          border: 1px solid var(--colorDetail);
         }
       }
 
@@ -100,60 +80,22 @@
         align-items: center;
         gap: 1rem;
 
-        h4 {
-          font-size: 1.8rem;
-          font-family: $fontTitulos;
-        }
-
         a {
           i {
-            color: $dark;
+            color: var(--colorDark);
             padding: 12px 20px;
-            transition: all 0.2s;
-            background-color: $detail;
-            border: 1px solid $detail;
+            transition: var(--transition-normal);
+            background-color: var(--colorDetail);
+            border: 1px solid var(--colorDetail);
 
             &:hover {
               background: transparent;
-              color: $detail;
-              border: 1px solid $detail;
+              color: var(--colorDetail);
+              border: 1px solid var(--colorDetail);
             }
           }
         }
       }
-    }
-  }
-}
-
-// SECCIÓN RENTAL
-.rental {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  @include center;
-  padding: 8rem 2rem 12rem 2rem;
-  &__texto {
-    padding-right: 5rem;
-    h1 {
-      font-size: 2.5rem;
-      font-family: $fontTitulos;
-      width: 100%;
-
-      span {
-        color: $detail;
-      }
-    }
-    p {
-      font-size: 1.2rem;
-      width: 100%;
-      font-family: $fontTexto;
-      margin-left: 3px;
-    }
-  }
-  &__imagen {
-    img {
-      width: 100%;
-      border: 1px solid $detail;
     }
   }
 }

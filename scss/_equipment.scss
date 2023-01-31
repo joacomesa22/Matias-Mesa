@@ -4,15 +4,9 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 8rem 2rem;
+  padding: 3rem 2rem;
   @include center;
   gap: 3rem;
-
-  h1 {
-    font-size: 3.2rem;
-    color: $light;
-    font-family: $fontTitulos;
-  }
 
   .e-cards-container {
     display: grid;
@@ -27,20 +21,14 @@
       justify-content: flex-start;
       padding: 20px 20px;
       background: transparent;
-      border: 1px solid $detail;
+      border: 1px solid var(--colorDetail);
       gap: 1rem;
 
       &__img {
         img {
           width: 100%;
-          height: 100%;
-          border: 1px solid $detail;
+          border: 1px solid var(--colorDetail);
         }
-      }
-
-      h4 {
-        font-size: 1.4rem;
-        font-family: $fontTitulos;
       }
     }
   }
@@ -50,14 +38,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
   @include center;
   gap: 4rem;
 
   h1 {
-    font-size: 3.2rem;
-    color: $light;
-    font-family: $fontTitulos;
     text-align: center;
   }
 
@@ -73,7 +58,7 @@
       justify-content: flex-start;
       padding: 1rem;
       background: transparent;
-      border: 1px solid $detail;
+      border: 1px solid var(--colorDetail);
       gap: 1rem;
 
       &__img {
@@ -82,7 +67,7 @@
 
         img {
           width: 100%;
-          border: 1px solid $detail;
+          border: 1px solid var(--colorDetail);
         }
       }
 
@@ -90,14 +75,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.6rem;
         padding-left: 0.2rem;
-
-        h4 {
-          font-size: 1.6rem;
-          font-family: $fontTexto;
-          text-transform: uppercase;
-        }
 
         &-info {
           display: flex;
@@ -105,8 +84,7 @@
           gap: 0.5rem;
 
           p {
-            font-size: 1rem;
-            font-family: $fontTexto;
+            font-size: 0.9rem;
           }
         }
       }
