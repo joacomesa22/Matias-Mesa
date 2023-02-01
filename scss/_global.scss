@@ -25,3 +25,10 @@ a {
   position: fixed;
   right: 2rem;
 }
+// Wrapper
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer--lg);
+  margin: var(--spacer--lg);
+}

@@ -1,17 +1,15 @@
 // SECCIÓN HERO
 .hero {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   align-items: center;
-  @include center;
-  padding: 6rem 2rem;
+  justify-content: center;
+  gap: var(--spacer--md);
 
   &__texto {
-    justify-self: center;
     span {
       color: var(--colorDetail);
     }
-    h2 {
+    h4 {
       padding-left: 4px;
       color: #db0200;
     }
@@ -26,12 +24,13 @@
         margin-top: 0.6rem;
         padding-left: 4px;
         &:hover {
-          transform: scale(1.1);
+          transform: scale(1.02);
         }
       }
     }
   }
   &__imagen {
+    max-width: 600px;
     img {
       width: 100%;
       border: 1px solid var(--colorDetail);
@@ -43,29 +42,24 @@
 .work {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  padding: 2rem 1.5rem 6rem 1.5rem;
-  @include center;
+  gap: var(--spacer--md);
 
   .cards-container {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
-    margin-top: 3rem;
-    overflow: hidden;
+    gap: var(--spacer--md);
 
     .card {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding: 1.4rem;
+      padding: var(--spacer--sm);
       background: transparent;
       border: 1px solid var(--colorDetail);
-      gap: 1rem;
-      max-width: 400px;
+      gap: var(--spacer--sm);
+      max-width: 320px;
 
       &__img {
         img {
@@ -78,15 +72,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1rem;
-
         a {
           i {
             color: var(--colorDark);
-            padding: 12px 20px;
+            padding: 8px 12px;
             transition: var(--transition-normal);
             background-color: var(--colorDetail);
             border: 1px solid var(--colorDetail);
+            font-size: var(--fontS);
 
             &:hover {
               background: transparent;

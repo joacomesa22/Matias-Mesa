@@ -1,13 +1,9 @@
 // Comercials
-
 .slider-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  @include center;
-  padding: 3rem 2rem;
-  gap: 3rem;
+  gap: var(--spacer--md);
 
   .slider {
     display: flex;
@@ -24,7 +20,7 @@
 
       &-title {
         text-align: center;
-        margin-top: 0.6rem;
+        margin-top: var(--spacer--sm);
       }
 
       &-img {
@@ -36,17 +32,17 @@
 }
 
 .portfolio {
-  @include center;
-  padding: 2rem 2rem 6rem 2rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacer--md);
+  align-self: center;
+  width: 100%;
   &__card {
     display: flex;
     flex-direction: column;
     border: 1px solid var(--colorDetail);
-    padding: 1rem;
-    gap: 1rem;
+    padding: var(--spacer--sm);
+    gap: var(--spacer--sm);
     justify-content: flex-start;
     &-img {
       img {
@@ -58,6 +54,7 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      gap: var(--spacer--sm);
 
       &--info {
         display: flex;
