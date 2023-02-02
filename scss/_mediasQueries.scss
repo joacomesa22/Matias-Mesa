@@ -30,15 +30,12 @@
 
   // Footer
   .footer {
-    padding: 2rem;
     flex-direction: column;
     text-align: center;
-    gap: 2rem;
+    gap: var(--spacer--md);
   }
 
-  // INDEX
-
-  // Hero
+  // Home - Hero
   .hero {
     flex-wrap: wrap;
     &__texto {
@@ -51,17 +48,5 @@
   // Portfolio
   .portfolio {
     width: 80%;
-  }
-  // CONTACT
-  .formulario-container {
-    flex-direction: column;
-    align-items: center;
-
-    .datos {
-      &__info {
-        text-align: center;
-        gap: 4px;
-      }
-    }
   }
 }

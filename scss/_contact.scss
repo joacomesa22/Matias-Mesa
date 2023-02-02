@@ -1,19 +1,17 @@
 .formulario {
-  @include center;
-  padding: 6rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2rem;
+  align-items: flex-start;
+  gap: var(--spacer--md);
 
   .formulario-container {
     display: flex;
-    gap: 6rem;
-
+    flex-wrap: wrap;
+    gap: var(--spacer--lg);
     .form {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: var(--spacer--sm);
 
       &__text {
         display: flex;
@@ -39,26 +37,24 @@
           border: 1px solid var(--colorDetail);
           color: var(--colorLight);
           resize: none;
+          width: 100%;
         }
       }
 
       &__submit {
-        width: 100px;
-        padding: 4px 8px;
+        padding: 6px 10px;
         color: var(--colorDark);
         background: var(--colorDetail);
         border: 1px solid var(--colorDetail);
         transition: var(--transition-normal);
         font-size: var(--fontS);
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
+        width: max-content;
 
         &:hover {
           background: transparent;
           color: var(--colorDetail);
           border: 1px solid var(--colorDetail);
-          transform: scale(1.1);
+          transform: scale(1.02);
         }
       }
     }
@@ -66,7 +62,7 @@
     .datos {
       display: flex;
       flex-direction: column;
-      gap: 3rem;
+      gap: var(--spacer--md);
 
       &__info {
         display: flex;
@@ -77,7 +73,7 @@
         }
 
         h4 {
-          margin: 0.5rem 0 0.1rem 0;
+          margin: 0.4rem 0 0.1rem 0;
         }
 
         p {

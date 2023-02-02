@@ -1,9 +1,3 @@
-// Centrado
-@mixin center {
-  margin: 0 auto;
-  max-width: 1400px;
-}
-
 :root {
   // Spacers
   --spacer--sm: clamp(12px, 6.615383px + 1.538462vw, 22px);
