@@ -18,18 +18,19 @@
       padding: var(--spacer--sm);
       gap: var(--spacer--sm);
       background: transparent;
-      border: 1px solid var(--colorDetail);
+      border: var(--border);
 
       &__img {
         img {
           width: 100%;
-          border: 1px solid var(--colorDetail);
+          border: var(--border);
         }
       }
     }
   }
 }
 
+// Underwater Equipment
 .underwater {
   display: flex;
   flex-direction: column;
@@ -53,12 +54,12 @@
       padding: var(--spacer--sm);
       gap: var(--spacer--sm);
       background: transparent;
-      border: 1px solid var(--colorDetail);
+      border: var(--border);
 
       &__img {
         img {
           width: 100%;
-          border: 1px solid var(--colorDetail);
+          border: var(--border);
         }
       }
 

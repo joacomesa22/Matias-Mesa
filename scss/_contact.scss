@@ -1,3 +1,4 @@
+// Form
 .formulario {
   display: flex;
   flex-direction: column;
@@ -21,7 +22,7 @@
 
         input {
           background: transparent;
-          border: 1px solid var(--colorDetail);
+          border: var(--border);
           color: var(--colorLight);
           padding: 7px;
         }
@@ -34,7 +35,7 @@
 
         textarea {
           background: transparent;
-          border: 1px solid var(--colorDetail);
+          border: var(--border);
           color: var(--colorLight);
           resize: none;
           width: 100%;
@@ -45,15 +46,16 @@
         padding: 6px 10px;
         color: var(--colorDark);
         background: var(--colorDetail);
-        border: 1px solid var(--colorDetail);
-        transition: var(--transition-normal);
+        border: var(--border);
+        transition: var(--transition);
         font-size: var(--fontS);
         width: max-content;
+        cursor: pointer;
 
         &:hover {
           background: transparent;
           color: var(--colorDetail);
-          border: 1px solid var(--colorDetail);
+          border: var(--border);
           transform: scale(1.02);
         }
       }

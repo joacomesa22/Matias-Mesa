@@ -1,4 +1,4 @@
-// Comercials
+// Slider
 .slider-section {
   display: flex;
   flex-direction: column;
@@ -25,12 +25,13 @@
 
       &-img {
         width: 100%;
-        border: 1px solid var(--colorDetail);
+        border: var(--border);
       }
     }
   }
 }
 
+// Cards
 .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -40,7 +41,7 @@
   &__card {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--colorDetail);
+    border: var(--border);
     padding: var(--spacer--sm);
     gap: var(--spacer--sm);
     justify-content: flex-start;
@@ -72,14 +73,14 @@
         i {
           color: var(--colorDark);
           padding: 8px 12px;
-          transition: var(--transition-normal);
+          transition: var(--transition);
           background-color: var(--colorDetail);
-          border: 1px solid var(--colorDetail);
+          border: var(--border);
 
           &:hover {
             background: transparent;
             color: var(--colorDetail);
-            border: 1px solid var(--colorDetail);
+            border: var(--border);
           }
         }
       }

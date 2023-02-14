@@ -1,4 +1,4 @@
-// SECCIÓN HERO
+// Hero
 .hero {
   display: flex;
   align-items: center;
@@ -19,7 +19,7 @@
     a {
       i {
         font-size: 2.4rem;
-        transition: var(--transition-normal);
+        transition: var(--transition);
         cursor: pointer;
         margin-top: 0.6rem;
         padding-left: 4px;
@@ -33,12 +33,12 @@
     max-width: 600px;
     img {
       width: 100%;
-      border: 1px solid var(--colorDetail);
+      border: var(--border);
     }
   }
 }
 
-// SECCIÓN WORK
+// Work
 .work {
   display: flex;
   flex-direction: column;
@@ -57,14 +57,14 @@
       flex-direction: column;
       padding: var(--spacer--sm);
       background: transparent;
-      border: 1px solid var(--colorDetail);
+      border: var(--border);
       gap: var(--spacer--sm);
       max-width: 320px;
 
       &__img {
         img {
           width: 100%;
-          border: 1px solid var(--colorDetail);
+          border: var(--border);
         }
       }
 
@@ -76,15 +76,15 @@
           i {
             color: var(--colorDark);
             padding: 8px 12px;
-            transition: var(--transition-normal);
+            transition: var(--transition);
             background-color: var(--colorDetail);
-            border: 1px solid var(--colorDetail);
+            border: var(--border);
             font-size: var(--fontS);
 
             &:hover {
               background: transparent;
               color: var(--colorDetail);
-              border: 1px solid var(--colorDetail);
+              border: var(--border);
             }
           }
         }

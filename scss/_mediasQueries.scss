@@ -15,9 +15,9 @@
     width: 100%;
     height: 100vh;
     text-align: center;
-    transition: var(--transition-normal);
+    transition: var(--transition);
     justify-content: space-evenly;
-    border-left: 2px solid var(--colorDetail);
+    border-left: var(--border);
 
     &__link {
       font-size: var(--fontM);
