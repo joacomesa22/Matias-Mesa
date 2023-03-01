@@ -1,10 +1,10 @@
 // Funcionalidad Barras
 const btnMenu = document.querySelector(".btn");
 const navMenu = document.querySelector(".nav");
+const contactBtn = document.querySelector(".contact");
 
 btnMenu.addEventListener("click", () => {
   navMenu.classList.toggle("active");
-  btnMenu.classList.toggle("fixed");
 });
 
 document.querySelectorAll(".nav__link").forEach((link) =>

@@ -23,81 +23,58 @@
   <body>
     <header class="header-container">
       <div class="logo">
-        <a href="index.html"><img src="./img/logo.png" alt="logo" /></a>
+        <a href="./index.html"><img src="./img/logo.png" alt="logo" /></a>
       </div>
       <nav class="nav">
-        <a href="pages/commercials.html" class="nav__link">Commercials</a>
-        <a href="pages/movies.html" class="nav__link">Movies</a>
-        <a href="pages/equipment.html" class="nav__link">Equipment</a>
-        <a href="pages/gallery.html" class="nav__link">Gallery</a>
-        <a href="pages/contact.html" class="nav__link">Contact</a>
+        <a href="./pages/commercials.html" class="nav__link">Commercials</a>
+        <a href="./pages/movies.html" class="nav__link">Movies</a>
+        <a href="./pages/equipment.html" class="nav__link">Equipment</a>
       </nav>
-      <div class="btn">
-        <span class="btn__line1"></span>
-        <span class="btn__line2"></span>
-        <span class="btn__line3"></span>
+      <div class="nav-right">
+        <p class="nav-right__info">ADF-SOC</p>
+        <div class="btn">
+          <span class="btn__line1"></span>
+          <span class="btn__line2"></span>
+          <span class="btn__line3"></span>
+        </div>
       </div>
     </header>
 
     <main>
-      <div class="wrapper">
-        <section class="hero">
-          <div class="hero__imagen">
-            <img src="./img/blanco-negro.jpg" alt="matias con steady" />
-          </div>
-          <div class="hero__texto">
+      <!-- <div class="wrapper"> -->
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__container-texto">
             <h4>ADF-SOC</h4>
-            <h1>Matias <span>Mesa</span></h1>
+            <h1>Matias Mesa</h1>
             <p>Steadicam Operator / Underwater Camera Operator</p>
-            <a
-              href="https://www.imdb.com/name/nm0581764/?ref_=fn_al_nm_1"
-              target="_blank"
-              ><i class="fa-brands fa-imdb"></i
-            ></a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="work">
-          <h1>Work</h1>
-          <div class="cards-container">
-            <div class="card">
-              <div class="card__img">
-                <img src="./img/madera.jpg" alt="" />
-              </div>
-              <div class="card__texto">
-                <h3>Commercials</h3>
-                <a href="./pages/commercials.html"
-                  ><i class="fa-solid fa-plus"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card__img">
-                <img src="./img/steady.jpeg" alt="" />
-              </div>
-              <div class="card__texto">
-                <h3>Movies</h3>
-                <a href="./pages/movies.html"
-                  ><i class="fa-solid fa-plus"></i
-                ></a>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card__img">
-                <img src="./img/con-camara.jpeg" alt="" />
-              </div>
-              <div class="card__texto">
-                <h3>Equipment</h3>
-                <a href="./pages/equipment.html"
-                  ><i class="fa-solid fa-plus"></i
-                ></a>
-              </div>
-            </div>
+      <section class="work-container">
+        <div class="work">
+          <div class="work__card">
+            <a href="./pages/commercials.html" class="work__card-img">
+              <img src="./img/steady-desierto.jpg" alt="" />
+            </a>
+            <h2>Movies</h2>
           </div>
-        </section>
-      </div>
+          <div class="work__card">
+            <a href="./pages/movies.html" class="work__card-img"
+              ><img src="./img/steady.jpeg" alt="" />
+            </a>
+            <h2>Commercials</h2>
+          </div>
+          <div class="work__card">
+            <a href="./pages/equipment.html" class="work__card-img"
+              ><img src="./img/desierto2.jpg" alt="" />
+            </a>
+            <h2>Equipment</h2>
+          </div>
+        </div>
+      </section>
+      <!-- </div> -->
     </main>
 
     <footer class="footer">
@@ -120,6 +97,34 @@
       <p class="footer__copy">&copy; Copyright Matias Mesa 2022</p>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script defer src="./js/main.js"></script>
   </body>
 </html>
+
+<!-- <div class="cards-container">
+          <div class="card">
+            <a href="./pages/commercials.html"
+              ><img class="card__img workImg" src="./img/madera.jpg" alt=""
+            /></a>
+
+            <h3 class="card__texto ocultar">Commercials</h3>
+          </div>
+
+          <div class="card">
+            <a href="./pages/movies.html"
+              ><img class="card__img workImg" src="./img/steady.jpeg" alt=""
+            /></a>
+            <h3 class="card__texto ocultar">Movies</h3>
+          </div>
+
+          <div class="card">
+            <a href="./pages/equipment.html"
+              ><img
+                class="card__img workImg"
+                src="./img/con-camara.jpeg"
+                alt=""
+            /></a>
+
+            <h3 class="card__texto ocultar">Equipment</h3>
+          </div>
+        </div> -->

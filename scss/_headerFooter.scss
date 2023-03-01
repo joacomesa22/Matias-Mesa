@@ -1,13 +1,16 @@
 // Header
 .header-container {
-  padding: calc(var(--spacer--md) - var(--spacer--sm));
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: var(--border);
+  padding: var(--spacer--sm);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  font-family: var(--fontTitles);
 }
 .logo {
-  max-width: 180px;
+  justify-self: center;
+  max-width: 220px;
   transition: var(--transition);
   &:hover {
     transform: scale(1.02);
@@ -21,7 +24,7 @@
   width: 30px;
   height: 30px;
   display: none;
-
+  padding-top: 0.2px;
   span {
     display: block;
     width: 100%;
@@ -44,18 +47,19 @@
 }
 
 .nav {
+  justify-self: center;
   display: flex;
   align-items: center;
   gap: var(--spacer--sm);
   &__link {
     margin-top: 8px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 600;
     &::after {
       content: "";
       display: block;
-      background: var(--colorDetail);
+      background: var(--colorLight);
       width: 100%;
       margin-top: 4px;
       height: 1.3px;
@@ -68,18 +72,29 @@
   }
 }
 
+.nav-right {
+  align-self: center;
+  justify-self: center;
+
+  &__info {
+    color: #db0200;
+  }
+}
+
 // Footer
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--colorDetail);
+  border-top: 1px solid var(--colorLight);
   padding: var(--spacer--md);
+  background-color: #000;
+  background-image: url(../img/black-twill.png);
   &__social {
     display: flex;
     gap: var(--spacer--sm);
     i {
-      font-size: 1.8rem;
+      font-size: 2rem;
       transition: var(--transition);
       cursor: pointer;
 
