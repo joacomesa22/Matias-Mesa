@@ -18,10 +18,3 @@ a {
 .ocultar {
   display: none;
 }
-// Wrapper
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacer--lg);
-  margin: var(--spacer--lg);
-}

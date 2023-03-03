@@ -70,11 +70,12 @@
       }
     }
   }
-}
 
-@media screen and (max-width: 480px) {
   // Portfolio
-  .portfolio {
-    width: 80%;
+  .portfolio__card-text {
+    display: block;
+  }
+  .portfolio__card-img {
+    opacity: 0.8;
   }
 }

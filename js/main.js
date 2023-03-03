@@ -1,7 +1,6 @@
 // Funcionalidad Barras
 const btnMenu = document.querySelector(".btn");
 const navMenu = document.querySelector(".nav");
-const contactBtn = document.querySelector(".contact");
 
 btnMenu.addEventListener("click", () => {
   navMenu.classList.toggle("active");
@@ -24,51 +23,4 @@ function animacionBarras() {
   line1.classList.toggle("btn__line1-active");
   line2.classList.toggle("btn__line2-active");
   line3.classList.toggle("btn__line3-active");
-}
-
-// Slider
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs((slideIndex += n));
-}
-
-function showDivs(n) {
-  var i;
-  // acá define qué elemento entra en el slider
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {
-    slideIndex = 1;
-  }
-
-  if (n < 1) {
-    slideIndex = x.length;
-  }
-
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-
-  x[slideIndex - 1].style.display = "block";
-}
-
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  slideIndex++;
-
-  if (slideIndex > x.length) {
-    slideIndex = 1;
-  }
-
-  x[slideIndex - 1].style.display = "block";
-
-  setTimeout(carousel, 2000); // Cambia la imagen cada 2 segundos
 }

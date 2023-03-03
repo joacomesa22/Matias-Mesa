@@ -9,6 +9,7 @@
   --fontL: clamp(1.35rem, 0.93636366rem + 1.890909vw, 2rem);
   --fontXL: clamp(1.5rem, 0.73636366rem + 3.490909vw, 2.7rem);
   --fontXXL: clamp(4rem, 3.6479rem + 1.5023vw, 5rem);
+  --fontXXL2: clamp(3rem, 2.2958rem + 3.0047vw, 5rem);
   --colorLight: #f2f2f2;
   --colorDark: #0d0d0d;
   --colorDetail: #3084f2;
@@ -30,7 +31,7 @@ h3 {
   font-family: var(--fontTitles); }
 
 h4 {
-  font-size: var(--fontS);
+  font-size: var(--fontM);
   font-family: var(--fontText); }
 
 p {
@@ -56,12 +57,6 @@ a {
 
 .ocultar {
   display: none; }
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacer--lg);
-  margin: var(--spacer--lg); }
 
 .header-container {
   padding: var(--spacer--sm);
@@ -219,66 +214,54 @@ a {
         transform: translate(-50%, -50%);
         text-shadow: -2px 5px 6px rgba(0, 0, 0, 0.5); }
 
-.slider-section {
+.hero-portfolio {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/soldadura.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: var(--spacer--md); }
-  .slider-section .slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; }
-    .slider-section .slider__card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%; }
-      .slider-section .slider__card-title {
-        text-align: center;
-        margin-top: var(--spacer--sm); }
-      .slider-section .slider__card-img {
-        width: 100%;
-        border: var(--border); }
+  justify-content: center; }
+  .hero-portfolio h1 {
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+    font-size: var(--fontXXL2); }
+
+.second-bg {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/steady-palmeras.jpg); }
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacer--md);
-  align-self: center;
-  width: 100%; }
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  background-color: #000;
+  padding: var(--spacer--sm);
+  border-top: 1px solid #fff; }
   .portfolio__card {
-    display: flex;
-    flex-direction: column;
-    border: var(--border);
-    padding: var(--spacer--sm);
-    gap: var(--spacer--sm);
-    justify-content: flex-start; }
-    .portfolio__card-img img {
-      width: 100%; }
+    position: relative; }
+    .portfolio__card:hover .portfolio__card-text {
+      display: block; }
+    .portfolio__card:hover .portfolio__card-img {
+      opacity: 0.8; }
+    .portfolio__card-img {
+      opacity: 1;
+      transition: all 0.5s;
+      line-height: 0; }
+      .portfolio__card-img img {
+        width: 100%; }
     .portfolio__card-text {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: var(--spacer--sm); }
-      .portfolio__card-text--info {
-        display: flex;
-        flex-direction: column; }
-        .portfolio__card-text--info h4 {
-          margin-bottom: 0.4rem; }
-        .portfolio__card-text--info p {
-          font-size: 0.8rem; }
-      .portfolio__card-text a i {
-        color: var(--colorDark);
-        padding: 8px 12px;
-        transition: var(--transition);
-        background-color: var(--colorDetail);
-        border: var(--border); }
-        .portfolio__card-text a i:hover {
-          background: transparent;
-          color: var(--colorDetail);
-          border: var(--border); }
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: -2px 5px 6px rgba(0, 0, 0, 0.5);
+      transition: all 0.5s;
+      display: none; }
+      .portfolio__card-text h4 {
+        margin-bottom: 0.4rem; }
+      .portfolio__card-text p {
+        font-size: 0.8rem; }
 
 .equipment {
   display: flex;
@@ -443,8 +426,8 @@ a {
       height: 0; }
       .work-container .work__card:hover {
         height: 300px;
-        width: 100%; } }
-
-@media screen and (max-width: 480px) {
-  .portfolio {
-    width: 80%; } }
+        width: 100%; }
+  .portfolio__card-text {
+    display: block; }
+  .portfolio__card-img {
+    opacity: 0.8; } }
