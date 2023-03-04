@@ -1,20 +1,21 @@
 // Hero
-.hero {
+.hero-index {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
     ),
     url(../img/facha.jpg);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
 
-  &__container {
+  .hero-index__container {
     width: 80%;
     height: 100%;
     display: flex;
@@ -23,6 +24,7 @@
     &-texto {
       h1 {
         text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+        font-size: var(--fontXXL2);
       }
       h4 {
         padding-left: 4px;
@@ -32,13 +34,6 @@
         padding-left: 4px;
         text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
       }
-    }
-  }
-  &__imagen {
-    max-width: 600px;
-    img {
-      width: 100%;
-      border: var(--border);
     }
   }
 }

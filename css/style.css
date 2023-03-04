@@ -8,8 +8,8 @@
   --fontM: clamp(1.18rem, 0.94454538rem + 1.076364vw, 1.55rem);
   --fontL: clamp(1.35rem, 0.93636366rem + 1.890909vw, 2rem);
   --fontXL: clamp(1.5rem, 0.73636366rem + 3.490909vw, 2.7rem);
-  --fontXXL: clamp(4rem, 3.6479rem + 1.5023vw, 5rem);
   --fontXXL2: clamp(3rem, 2.2958rem + 3.0047vw, 5rem);
+  --fontXXL: clamp(4rem, 3.6479rem + 1.5023vw, 5rem);
   --colorLight: #f2f2f2;
   --colorDark: #0d0d0d;
   --colorDetail: #3084f2;
@@ -131,7 +131,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid var(--colorLight);
   padding: var(--spacer--md);
   background-color: #000;
   background-image: url(../img/black-twill.png); }
@@ -147,34 +146,31 @@ a {
   .footer__copy {
     font-size: 0.8rem; }
 
-.hero {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/facha.jpg);
-  background-position: right;
+.hero-index {
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
   display: flex;
-  justify-content: center; }
-  .hero__container {
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/facha.jpg); }
+  .hero-index .hero-index__container {
     width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start; }
-    .hero__container-texto h1 {
-      text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5); }
-    .hero__container-texto h4 {
+    .hero-index .hero-index__container-texto h1 {
+      text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+      font-size: var(--fontXXL2); }
+    .hero-index .hero-index__container-texto h4 {
       padding-left: 4px;
       color: #db0200; }
-    .hero__container-texto p {
+    .hero-index .hero-index__container-texto p {
       padding-left: 4px;
       text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5); }
-  .hero__imagen {
-    max-width: 600px; }
-    .hero__imagen img {
-      width: 100%;
-      border: var(--border); }
 
 .work-container {
   background-color: #000;
@@ -214,22 +210,33 @@ a {
         transform: translate(-50%, -50%);
         text-shadow: -2px 5px 6px rgba(0, 0, 0, 0.5); }
 
-.hero-portfolio {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/soldadura.jpg);
-  background-position: right;
+.hero-movies {
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
-  .hero-portfolio h1 {
+  justify-content: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/steady-palmeras.jpg); }
+  .hero-movies h1 {
     text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
     font-size: var(--fontXXL2); }
 
-.second-bg {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/steady-palmeras.jpg); }
+.hero-commercials {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/soldadura.jpg); }
+  .hero-commercials h1 {
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+    font-size: var(--fontXXL2); }
 
 .portfolio {
   display: grid;
@@ -251,6 +258,7 @@ a {
         width: 100%; }
     .portfolio__card-text {
       position: absolute;
+      width: 80%;
       text-align: center;
       top: 50%;
       left: 50%;
@@ -263,57 +271,88 @@ a {
       .portfolio__card-text p {
         font-size: 0.8rem; }
 
+.hero-equipment {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/bazooka.jpg); }
+  .hero-equipment h1 {
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+    font-size: var(--fontXXL2); }
+
 .equipment {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacer--md); }
+  background: #000;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: var(--spacer--lg); }
   .equipment .e-cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacer--md);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacer--sm);
     width: 100%; }
     .equipment .e-cards-container .e-card {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      padding: var(--spacer--sm);
-      gap: var(--spacer--sm);
-      background: transparent;
-      border: var(--border); }
-      .equipment .e-cards-container .e-card__img img {
-        width: 100%;
-        border: var(--border); }
+      border: 1px solid #fff; }
+      .equipment .e-cards-container .e-card__img {
+        line-height: 0; }
+        .equipment .e-cards-container .e-card__img img {
+          width: 100%; }
+      .equipment .e-cards-container .e-card p {
+        text-align: center;
+        font-weight: 600;
+        padding: 4px; }
+
+.hero-underwater {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/agua-bulgaria.jpg); }
+  .hero-underwater h1 {
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+    font-size: var(--fontXXL2);
+    text-align: center; }
 
 .underwater {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacer--md); }
-  .underwater h1 {
-    text-align: center; }
+  padding: var(--spacer--lg);
+  gap: var(--spacer--md);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background: #000; }
   .underwater .u-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: var(--spacer--md);
+    gap: var(--spacer--sm);
     width: 100%; }
     .underwater .u-cards-container .u-card {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      padding: var(--spacer--sm);
-      gap: var(--spacer--sm);
-      background: transparent;
-      border: var(--border); }
+      border: 1px solid #fff; }
       .underwater .u-cards-container .u-card__img img {
-        width: 100%;
-        border: var(--border); }
+        width: 100%; }
       .underwater .u-cards-container .u-card__text {
         display: flex;
         flex-direction: column;
-        gap: calc(var(--spacer--sm) / 2); }
-        .underwater .u-cards-container .u-card__text h3 {
-          font-size: var(--fontM); }
+        gap: calc(var(--spacer--sm) / 2);
+        padding: 8px 16px; }
         .underwater .u-cards-container .u-card__text-info {
           display: flex;
           flex-direction: column;
@@ -413,12 +452,6 @@ a {
     flex-direction: column;
     text-align: center;
     gap: var(--spacer--md); }
-  .hero {
-    background-position: 70% 50%; }
-    .hero__container {
-      justify-content: center; }
-      .hero__container-texto {
-        text-align: center; }
   .work-container .work {
     flex-direction: column; }
     .work-container .work__card {
@@ -427,7 +460,14 @@ a {
       .work-container .work__card:hover {
         height: 300px;
         width: 100%; }
+  .portfolio {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
   .portfolio__card-text {
     display: block; }
   .portfolio__card-img {
-    opacity: 0.8; } }
+    opacity: 0.8; }
+  .hero-index,
+  .hero-commercials {
+    background-position: 70% 50%; }
+  .equipment .e-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); } }

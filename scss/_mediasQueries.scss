@@ -45,17 +45,6 @@
     gap: var(--spacer--md);
   }
 
-  // Home - Hero
-  .hero {
-    background-position: 70% 50%;
-    &__container {
-      justify-content: center;
-      &-texto {
-        text-align: center;
-      }
-    }
-  }
-
   // Work
   .work-container {
     .work {
@@ -72,10 +61,24 @@
   }
 
   // Portfolio
+  .portfolio {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
   .portfolio__card-text {
     display: block;
   }
   .portfolio__card-img {
     opacity: 0.8;
+  }
+
+  // Backgrounds
+  .hero-index,
+  .hero-commercials {
+    background-position: 70% 50%;
+  }
+
+  // Equipment
+  .equipment .e-cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
 }
