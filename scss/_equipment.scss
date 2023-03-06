@@ -1,33 +1,22 @@
 // Hero
 .hero-equipment {
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
     ),
     url(../img/bazooka.jpg);
-
-  h1 {
-    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
-    font-size: var(--fontXXL2);
-  }
 }
 .equipment {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #000;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  padding: var(--spacer--lg);
+  background: var(--colorDark);
+  border-top: var(--border);
+  border-bottom: var(--border);
+  padding: var(--spacer--sm);
 
   .e-cards-container {
     display: grid;
@@ -39,7 +28,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      border: 1px solid #fff;
+      border: var(--border);
 
       &__img {
         line-height: 0;
@@ -60,13 +49,8 @@
 // Underwater Equipment
 .hero-underwater {
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 50vh;
+  @include center;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.2),
@@ -75,8 +59,6 @@
     url(../img/agua-bulgaria.jpg);
 
   h1 {
-    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
-    font-size: var(--fontXXL2);
     text-align: center;
   }
 }
@@ -86,9 +68,9 @@
   align-items: center;
   padding: var(--spacer--lg);
   gap: var(--spacer--md);
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  background: #000;
+  border-top: var(--border);
+  border-bottom: var(--border);
+  background: var(--colorDark);
 
   .u-cards-container {
     display: grid;
@@ -100,7 +82,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      border: 1px solid #fff;
+      border: var(--border);
 
       &__img {
         img {

@@ -23,7 +23,6 @@
     text-align: center;
     transition: var(--transition);
     justify-content: space-evenly;
-    border-left: var(--border);
 
     &__link {
       font-size: var(--fontM);
@@ -80,5 +79,16 @@
   // Equipment
   .equipment .e-cards-container {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  // Contact
+  .formulario {
+    height: max-content;
+    padding-top: calc(var(--spacer--md) + 90px);
+    gap: var(--spacer--sm);
+  }
+
+  .formulario-container {
+    padding: var(--spacer--md);
   }
 }

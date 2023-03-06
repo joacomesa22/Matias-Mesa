@@ -15,7 +15,26 @@
   --colorDetail: #3084f2;
   --transition: all 250ms ease-in-out;
   --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  --border: 1px solid var(--colorDetail); }
+  --border: 1px solid var(--colorLight);
+  --text--shadow-a: 0px 1px 6px rgba(0, 0, 0, 0.5);
+  --text--shadow-b: -2px 5px 6px rgba(0, 0, 0, 0.6); }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none; }
+
+body {
+  color: var(--colorLight);
+  font-family: var(--fontText); }
+
+a {
+  color: var(--colorLight); }
 
 h1 {
   font-size: var(--fontXXL);
@@ -38,25 +57,16 @@ p {
   line-height: 1.4;
   font-size: var(--fontS); }
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none; }
-
-body {
-  color: var(--colorLight);
-  font-family: var(--fontText); }
-
-a {
-  color: var(--colorLight); }
-
 .ocultar {
   display: none; }
+
+.hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
+  .hero h1 {
+    text-shadow: var(--text--shadow-a);
+    font-size: var(--fontXXL2); }
 
 .header-container {
   padding: var(--spacer--sm);
@@ -114,7 +124,6 @@ a {
       display: block;
       background: var(--colorLight);
       width: 100%;
-      margin-top: 4px;
       height: 1.3px;
       clip-path: var(--clippy);
       transition: var(--transition); }
@@ -132,7 +141,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: var(--spacer--md);
-  background-color: #000;
+  background-color: var(--colorDark);
   background-image: url(../img/black-twill.png); }
   .footer__social {
     display: flex;
@@ -148,10 +157,7 @@ a {
 
 .hero-index {
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,24 +168,22 @@ a {
     display: flex;
     align-items: center;
     justify-content: flex-start; }
-    .hero-index .hero-index__container-texto h1 {
-      text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
-      font-size: var(--fontXXL2); }
     .hero-index .hero-index__container-texto h4 {
       padding-left: 4px;
       color: #db0200; }
     .hero-index .hero-index__container-texto p {
       padding-left: 4px;
-      text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5); }
+      text-shadow: var(--text--shadow-a); }
 
 .work-container {
-  background-color: #000;
+  background-color: var(--colorDark);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--spacer--sm);
-  border-top: 1px solid var(--colorLight); }
+  border-top: var(--border);
+  border-bottom: var(--border); }
   .work-container .work {
     gap: var(--spacer--sm);
     display: flex;
@@ -208,42 +212,29 @@ a {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-shadow: -2px 5px 6px rgba(0, 0, 0, 0.5); }
+        text-shadow: var(--text--shadow-b); }
 
 .hero-movies {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
+  background-position: top;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/steady-palmeras.jpg); }
-  .hero-movies h1 {
-    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
-    font-size: var(--fontXXL2); }
 
 .hero-commercials {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
+  background-position: top;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/soldadura.jpg); }
-  .hero-commercials h1 {
-    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
-    font-size: var(--fontXXL2); }
 
 .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   background-color: #000;
   padding: var(--spacer--sm);
-  border-top: 1px solid #fff; }
+  border-top: var(--border);
+  border-bottom: var(--border); }
   .portfolio__card {
     position: relative; }
     .portfolio__card:hover .portfolio__card-text {
@@ -263,8 +254,7 @@ a {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      text-shadow: -2px 5px 6px rgba(0, 0, 0, 0.5);
-      transition: all 0.5s;
+      text-shadow: var(--text--shadow-b);
       display: none; }
       .portfolio__card-text h4 {
         margin-bottom: 0.4rem; }
@@ -273,26 +263,19 @@ a {
 
 .hero-equipment {
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/bazooka.jpg); }
-  .hero-equipment h1 {
-    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
-    font-size: var(--fontXXL2); }
 
 .equipment {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #000;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  padding: var(--spacer--lg); }
+  background: var(--colorDark);
+  border-top: var(--border);
+  border-bottom: var(--border);
+  padding: var(--spacer--sm); }
   .equipment .e-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -302,7 +285,7 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      border: 1px solid #fff; }
+      border: var(--border); }
       .equipment .e-cards-container .e-card__img {
         line-height: 0; }
         .equipment .e-cards-container .e-card__img img {
@@ -314,17 +297,12 @@ a {
 
 .hero-underwater {
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/agua-bulgaria.jpg); }
   .hero-underwater h1 {
-    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
-    font-size: var(--fontXXL2);
     text-align: center; }
 
 .underwater {
@@ -333,9 +311,9 @@ a {
   align-items: center;
   padding: var(--spacer--lg);
   gap: var(--spacer--md);
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  background: #000; }
+  border-top: var(--border);
+  border-bottom: var(--border);
+  background: var(--colorDark); }
   .underwater .u-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -345,7 +323,7 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      border: 1px solid #fff; }
+      border: var(--border); }
       .underwater .u-cards-container .u-card__img img {
         width: 100%; }
       .underwater .u-cards-container .u-card__text {
@@ -361,13 +339,17 @@ a {
             font-size: 0.8rem; }
 
 .formulario {
+  background-position: center;
+  border-bottom: var(--border);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacer--md); }
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/con-camara.jpeg); }
   .formulario .formulario-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     gap: var(--spacer--lg); }
     .formulario .formulario-container .form {
       display: flex;
@@ -377,36 +359,38 @@ a {
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
-        width: 50%; }
+        width: 60%; }
         .formulario .formulario-container .form__text input {
-          background: transparent;
-          border: var(--border);
-          color: var(--colorLight);
+          background: var(--colorLight);
+          color: var(--colorDark);
           padding: 7px; }
+          .formulario .formulario-container .form__text input:focus {
+            outline: none; }
       .formulario .formulario-container .form__textarea {
         display: flex;
         flex-direction: column;
         gap: 0.6rem; }
         .formulario .formulario-container .form__textarea textarea {
-          background: transparent;
-          border: var(--border);
-          color: var(--colorLight);
+          background: var(--colorLight);
+          color: var(--colorDark);
+          padding: 7px;
           resize: none;
           width: 100%; }
+          .formulario .formulario-container .form__textarea textarea:focus {
+            outline: none; }
       .formulario .formulario-container .form__submit {
         padding: 6px 10px;
         color: var(--colorDark);
-        background: var(--colorDetail);
-        border: var(--border);
+        background: var(--colorLight);
+        border: 1px solid var(--colorDark);
         transition: var(--transition);
         font-size: var(--fontS);
         width: max-content;
         cursor: pointer; }
         .formulario .formulario-container .form__submit:hover {
-          background: transparent;
-          color: var(--colorDetail);
-          border: var(--border);
-          transform: scale(1.02); }
+          background: var(--colorDark);
+          color: var(--colorLight);
+          border: var(--border); }
     .formulario .formulario-container .datos {
       display: flex;
       flex-direction: column;
@@ -440,8 +424,7 @@ a {
     height: 100vh;
     text-align: center;
     transition: var(--transition);
-    justify-content: space-evenly;
-    border-left: var(--border); }
+    justify-content: space-evenly; }
     .nav__link {
       font-size: var(--fontM); }
   .nav-right__info {
@@ -470,4 +453,10 @@ a {
   .hero-commercials {
     background-position: 70% 50%; }
   .equipment .e-cards-container {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); } }
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+  .formulario {
+    height: max-content;
+    padding-top: calc(var(--spacer--md) + 90px);
+    gap: var(--spacer--sm); }
+  .formulario-container {
+    padding: var(--spacer--md); } }

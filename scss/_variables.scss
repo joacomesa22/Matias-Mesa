@@ -22,27 +22,13 @@
   // Utilities
   --transition: all 250ms ease-in-out;
   --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  --border: 1px solid var(--colorDetail);
+  --border: 1px solid var(--colorLight);
+  --text--shadow-a: 0px 1px 6px rgba(0, 0, 0, 0.5);
+  --text--shadow-b: -2px 5px 6px rgba(0, 0, 0, 0.6);
 }
 
-h1 {
-  font-size: var(--fontXXL);
-  font-family: var(--fontTitles);
-  line-height: 1;
-}
-h2 {
-  font-size: var(--fontXL);
-  font-family: var(--fontTitles);
-}
-h3 {
-  font-size: var(--fontL);
-  font-family: var(--fontTitles);
-}
-h4 {
-  font-size: var(--fontM);
-  font-family: var(--fontText);
-}
-p {
-  line-height: 1.4;
-  font-size: var(--fontS);
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

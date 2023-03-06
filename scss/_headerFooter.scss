@@ -61,7 +61,6 @@
       display: block;
       background: var(--colorLight);
       width: 100%;
-      margin-top: 4px;
       height: 1.3px;
       clip-path: var(--clippy);
       transition: var(--transition);
@@ -87,7 +86,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--spacer--md);
-  background-color: #000;
+  background-color: var(--colorDark);
   background-image: url(../img/black-twill.png);
   &__social {
     display: flex;

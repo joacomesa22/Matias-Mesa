@@ -1,13 +1,8 @@
 // Hero
 .hero-index {
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.2),
@@ -22,17 +17,13 @@
     align-items: center;
     justify-content: flex-start;
     &-texto {
-      h1 {
-        text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
-        font-size: var(--fontXXL2);
-      }
       h4 {
         padding-left: 4px;
         color: #db0200;
       }
       p {
         padding-left: 4px;
-        text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
+        text-shadow: var(--text--shadow-a);
       }
     }
   }
@@ -40,13 +31,12 @@
 
 // Work
 .work-container {
-  background-color: #000;
+  background-color: var(--colorDark);
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center;
   padding: var(--spacer--sm);
-  border-top: 1px solid var(--colorLight);
+  border-top: var(--border);
+  border-bottom: var(--border);
 
   .work {
     gap: var(--spacer--sm);
@@ -82,42 +72,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-shadow: -2px 5px 6px rgba(0, 0, 0, 0.5);
+        text-shadow: var(--text--shadow-b);
       }
     }
   }
 }
-
-//   .cards-container {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     gap: var(--spacer--md);
-//     padding: calc(var(--spacer--lg) * 2) var(--spacer--md);
-//     flex-wrap: wrap;
-//     height: max-content;
-
-//     .card {
-//       display: flex;
-//       flex-direction: column;
-//       background: transparent;
-//       border: var(--border);
-//       gap: var(--spacer--sm);
-//       max-width: 400px;
-//       position: relative;
-//       &__img {
-//         width: 100%;
-//         height: 100%;
-//         &:hover {
-//           filter: brightness(70%);
-//         }
-//       }
-
-//       &__texto {
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//       }
-//     }
-//   }
