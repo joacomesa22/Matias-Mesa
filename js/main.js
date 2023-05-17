@@ -24,3 +24,15 @@ function animacionBarras() {
   line2.classList.toggle("btn__line2-active");
   line3.classList.toggle("btn__line3-active");
 }
+
+// Navbar Scroll Bg
+window.addEventListener("scroll", headerBg);
+function headerBg() {
+  const header = document.querySelector("#header");
+  const scrollVal = window.scrollY;
+  if (scrollVal > 700) {
+    header.classList.add("header__bg");
+  } else {
+    header.classList.remove("header__bg");
+  }
+}

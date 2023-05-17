@@ -25,7 +25,8 @@
 .portfolio {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  background-color: #000;
+  background-color: var(--colorDark);
+  background-image: url(../img/black-twill.png);
   padding: var(--spacer--sm);
   border-top: var(--border);
   border-bottom: var(--border);
@@ -67,4 +68,8 @@
       }
     }
   }
+}
+
+.portfolio__card-comm {
+  padding: var(--spacer--sm);
 }

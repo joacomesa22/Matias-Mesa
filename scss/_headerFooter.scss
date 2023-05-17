@@ -5,8 +5,9 @@
   grid-template-columns: repeat(3, 1fr);
   position: fixed;
   width: 100%;
-  z-index: 999;
+  z-index: 2;
   font-family: var(--fontTitles);
+  transition: all 0.3s;
 }
 .logo {
   justify-self: center;
@@ -16,6 +17,13 @@
     transform: scale(1.02);
   }
 }
+
+.header__bg {
+  background-color: var(--colorDark);
+  background-image: url(../img/black-twill.png);
+  border-bottom: 1px solid var(--colorLight);
+}
+
 .logo img {
   width: 100%;
 }
@@ -77,6 +85,7 @@
 
   &__info {
     color: #db0200;
+    text-shadow: var(--text--shadow-a);
   }
 }
 

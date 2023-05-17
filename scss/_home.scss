@@ -17,9 +17,11 @@
     align-items: center;
     justify-content: flex-start;
     &-texto {
+      position: fixed;
       h4 {
         padding-left: 4px;
         color: #db0200;
+        text-shadow: var(--text--shadow-a);
       }
       p {
         padding-left: 4px;
@@ -32,11 +34,14 @@
 // Work
 .work-container {
   background-color: var(--colorDark);
-  height: 100vh;
+  background-image: url(../img/black-twill.png);
+  height: 50vh;
   @include center;
   padding: var(--spacer--sm);
   border-top: var(--border);
   border-bottom: var(--border);
+  z-index: 1;
+  position: relative;
 
   .work {
     gap: var(--spacer--sm);

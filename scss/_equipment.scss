@@ -13,7 +13,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--colorDark);
+  background-color: var(--colorDark);
+  background-image: url(../img/black-twill.png);
   border-top: var(--border);
   border-bottom: var(--border);
   padding: var(--spacer--sm);
@@ -70,7 +71,8 @@
   gap: var(--spacer--md);
   border-top: var(--border);
   border-bottom: var(--border);
-  background: var(--colorDark);
+  background-color: var(--colorDark);
+  background-image: url(../img/black-twill.png);
 
   .u-cards-container {
     display: grid;
